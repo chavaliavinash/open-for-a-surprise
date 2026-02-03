@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Valentine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      text-align: center;
+      border: 2px solid #f2f2f2;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .google {
+      font-size: 64px;
+      font-weight: bold;
+    }
+    .g { color: #4285F4; }
+    .o1 { color: #DB4437; }
+    .o2 { color: #F4B400; }
+    .g2 { color: #4285F4; }
+    .l { color: #0F9D58; }
+    .e { color: #DB4437; }
+
+    .heart {
+      color: red;
+      font-size: 40px;
+      animation: pulse 1s infinite;
+      margin: 10px 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .msg {
+      margin-top: 20px;
+      font-size: 22px;
+    }
+
+    .question {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 25px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: #34A853;
+      color: white;
+    }
+
+    #no {
+      background-color: #EA4335;
+      color: white;
+      position: absolute;
+    }
+
+    .love {
+      font-size: 26px;
+      margin-top: 20px;
+      color: #DB4437;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="google">
+      <span class="g">G</span>
+      <span class="o1">o</span>
+      <span class="o2">o</span>
+      <span class="g2">g</span>
+      <span class="l">l</span>
+      <span class="e">e</span>
+    </div>
+
+    <div class="heart">❤️</div>
+
+    <div class="msg">
+      Searching for <b>my forever Valentine</b>…<br><br>
+      <b>hellooo:</b> Mathangi 🥰
+    </div>
+
+    <div class="question">
+      Will youuu be my Valentine?????
+    </div>
+
+    <div class="buttons">
+      <button id="yes" onclick="sayYes()">Yes 💖</button>
+      <button id="no" onmouseover="moveNo()">No 💔</button>
+    </div>
+
+    <div class="love" id="loveMsg">
+      Yayyy!! 💞<br>
+      Best decision ever, Mathangi 🌹
+    </div>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * 250;
+      const y = Math.random() * 150;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    function sayYes() {
+      document.getElementById("loveMsg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
